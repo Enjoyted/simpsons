@@ -57,7 +57,7 @@ Class Math extends Functions
         $c = ($this->{$func}($a) + $this->{$func}($b));
         for ($i = 0; $i < $n; $i++) {
             if (($i + 1) < $n) {
-                $sum1 += $this->{$func}($this->_xi($a, $h, $i));
+                $sum1 += $this->{$func}($this->_xi($a, $h, $i + 1));
             }
             $sum2 += $this->{$func}(($this->_xi($a, $h, $i) + $this->_xi($a, $h, $i + 1)) / 2);
         }
